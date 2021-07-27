@@ -7,7 +7,6 @@ pipeline {
         }
        }
        stage ('Build') {
-           stage ('Deploy to Staging'){
              steps {
                echo "Buila step..."
              }
