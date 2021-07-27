@@ -12,14 +12,9 @@ pipeline {
            }
          }
        }
-       stage ('Build') {
-             steps {
-               echo "Buila step..."
-             }
-           }
-           stage ('Deploy') {
-             steps {
-               echo "Deploy step..."
+       stage ('Deploy') {
+          steps {
+            echo "Deploy step..."
          }
        }
     }
