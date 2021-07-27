@@ -15,13 +15,13 @@ pipeline {
        stage ('Deploy to staging') {
           steps {
             build job:"deploy_to_staging"
-              sh "cp **/target/*.war /home/artem/Desktop/tomcat-stage/webapps"
+              sh "sudo cp **/target/*.war /home/artem/Desktop/tomcat-stage/webapps"
           }
        }
         stage ('Deploy to prod') {
           steps {
             build job:"deploy_to_prod"
-              sh "cp **/target/*.war /home/artem/Desktop/tomcat-prod/webapps"
+              sh "sudo cp **/target/*.war /home/artem/Desktop/tomcat-prod/webapps"
 
           }
        }
