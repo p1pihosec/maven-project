@@ -25,6 +25,7 @@ pipeline {
            stage ('Deploy to prod') {
              steps {
                sh "cp **/target/*.war /home/artem/Desktop/tomcat-prod/webapps"
+          }
         }     
       }
     }
