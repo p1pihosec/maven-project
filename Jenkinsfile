@@ -1,6 +1,9 @@
 pipeline {
   agent any
-  stages{
+  triggers {
+    pollSCM('*/5 * * * *')
+      }
+      stages{
        stage ('Build'){
         steps {
               sh 'mvn clean package'
@@ -12,16 +15,18 @@ pipeline {
            }
          }
        }
-       stage ('Deploy to staging') {
-          steps {
-            build job:"deploy_to_staging"
-          }
-       }
-        stage ('Deploy to prod') {
-          steps {
-            build job:"deploy_to_prod"
-          }
-       }
+       stage ('Deployments') {
+         parallel{
+           stage ('Deploy to Staging'){
+             steps {
+               sh "cp **/target/*.war /home/artem/Desktop/tomcat-stage/webapps"
+             }
+           }
+           stage ('Deploy to prod') {
+             steps {
+               sh "cp **/target/*.war /home/artem/Desktop/tomcat-prod/webapps"
+        }     
+      }
     }
+  }
 } 
-  
