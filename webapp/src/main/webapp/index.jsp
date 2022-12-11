@@ -10,5 +10,10 @@ String header = "Hello, World!";
     <body>
         <h2><%= header %></h2>
         <p>Today <%= new java.util.Date() %></p>
+        <%
+        out.print( request.getRemoteAddr() );
+        out.print( request.getRemoteHost() );
+        %>
+
     </body>
 </html>
