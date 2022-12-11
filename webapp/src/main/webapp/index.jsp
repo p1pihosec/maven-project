@@ -9,11 +9,9 @@ String header = "Hello, World!";
     </head>
     <body>
         <h2><%= header %></h2>
-        <p>Today <%= new java.util.Date() %></p>
-        <%
-        out.print( request.getRemoteAddr() );
-        out.print( request.getRemoteHost() );
-        %>
+        <p>Today <%= new java.util.Date() %>
+        Your IP address is <%out.print( request.getRemoteAddr() );%></p>
+
 
     </body>
 </html>
