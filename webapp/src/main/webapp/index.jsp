@@ -1,11 +1,11 @@
 <%
-String header = "Apache Tomcat";
+String header = "Hello, World!";
 %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>First JSP App</title>
+        <title>Test Java App</title>
     </head>
     <body>
         <h2><%= header %></h2>
