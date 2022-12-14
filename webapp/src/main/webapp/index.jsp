@@ -1,5 +1,5 @@
 <%
-String header = "Hello, World 12!";
+String header = "Hello, World!";
 %>
 <!DOCTYPE html>
 <html>
