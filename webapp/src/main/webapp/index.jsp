@@ -10,6 +10,6 @@ String header = "Hello, World!";
     <body>
         <h2><%= header %></h2>
         <p>Today <%= new java.util.Date() %></p>
-        <p>Your IP address is <%out.print( request.getRemoteAddr());%></p>
+        <p>k8s Cluster node IP address is <%out.print( request.getRemoteAddr());%></p>
     </body>
 </html>
